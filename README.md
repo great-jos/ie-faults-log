@@ -1,1 +1,1 @@
-To help residents around my neighbourhood report electricity faults
+To help residents around my neighbourhood report electricity faults remotely
