@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+
+import { FaultsCreatePage } from '../faults-create/faults-create.page';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +10,17 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  constructor(public modalController: ModalController) {
+ //  	const modal = await this.modalController.create({
+	// 	component: FaultsCreatePage
+	// });
+  }
+
+  async openModal() {
+	const modal = await this.modalController.create({
+		component: FaultsCreatePage
+	});
+	return await modal.present();
+  }
 
 }
